@@ -1,0 +1,15 @@
+{
+  "name": "linked-list",
+  "version": "1.0.0",
+  "description": "1. Has a reference to a `head` and to a `tail`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
