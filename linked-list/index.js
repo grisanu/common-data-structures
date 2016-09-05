@@ -41,6 +41,33 @@ LinkedList.prototype.removeHead = function () {
   return null;
 };
 
+// remove matched
+/****
+ * Advance node by one to remove and keep track to prev in each iteration
+ */
+LinkedList.prototype.removeMatched = function (target) {
+  let curr = this.head;
+  let prev;
+
+  while (curr !== null) {
+    if (curr.value === target) {
+      if (curr.next === null) {
+        prev.next = null;
+        this.tail = prev;
+        this.length--;
+        return;
+      }
+      prev = curr;
+      curr.value = curr.next.value;
+      curr.next = curr.next.next;
+      this.length--;
+    } else {
+      prev = curr;
+      curr = curr.next;
+    }
+  }
+};
+
 // contains
 LinkedList.prototype.contains = function (value) {
   let curr = this.head;
